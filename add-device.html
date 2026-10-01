@@ -1,0 +1,206 @@
+<section class="card">
+
+    <h2>
+        ➕ Add Device
+    </h2>
+
+    <p>
+        Connect a Smart Switch device using
+        its controller and communication method.
+    </p>
+
+
+    <!-- DEVICE NAME -->
+
+    <div class="input-group">
+
+        <label for="deviceName">
+            Device Name
+        </label>
+
+        <input
+            id="deviceName"
+            type="text"
+            placeholder="e.g. Bedroom Light"
+            required
+        >
+
+    </div>
+
+
+    <!-- HARDWARE -->
+
+    <div class="input-group">
+
+        <label for="deviceType">
+            Hardware / Controller
+        </label>
+
+        <select
+            id="deviceType"
+            required
+        >
+
+            <option value="">
+                Select controller
+            </option>
+
+            <option value="esp8266">
+                ESP8266
+            </option>
+
+            <option value="esp01">
+                ESP-01
+            </option>
+
+            <option value="esp32">
+                ESP32
+            </option>
+
+            <option value="arduino-uno">
+                Arduino Uno
+            </option>
+
+            <option value="arduino-nano">
+                Arduino Nano
+            </option>
+
+            <option value="other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- CONNECTION -->
+
+    <div class="input-group">
+
+        <label for="connectionType">
+            Connection Method
+        </label>
+
+        <select
+            id="connectionType"
+            required
+        >
+
+            <option value="">
+                Select connection
+            </option>
+
+            <option value="wifi">
+                Wi-Fi
+            </option>
+
+            <option value="bluetooth">
+                Bluetooth
+            </option>
+
+            <option value="ip">
+                IP Address
+            </option>
+
+            <option value="http">
+                HTTP
+            </option>
+
+            <option value="mqtt">
+                MQTT
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- IP -->
+
+    <div
+        id="ipSettings"
+        class="card hidden"
+    >
+
+        <h3>
+            🌐 Network Settings
+        </h3>
+
+        <div class="input-group">
+
+            <label for="deviceHost">
+                IP Address / Host
+            </label>
+
+            <input
+                id="deviceHost"
+                type="text"
+                placeholder="192.168.1.100"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="devicePort">
+                Port
+            </label>
+
+            <input
+                id="devicePort"
+                type="number"
+                placeholder="80"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- PROTOCOL -->
+
+    <div
+        id="protocolSettings"
+        class="card hidden"
+    >
+
+        <h3>
+            🔌 Protocol
+        </h3>
+
+        <div class="input-group">
+
+            <label for="deviceProtocol">
+                Protocol
+            </label>
+
+            <select id="deviceProtocol">
+
+                <option value="http">
+                    HTTP
+                </option>
+
+                <option value="mqtt">
+                    MQTT
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <button
+        id="saveDeviceButton"
+        class="primary-button"
+        type="button"
+    >
+
+        Add Device
+
+    </button>
+
+</section>
