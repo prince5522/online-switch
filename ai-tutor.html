@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <title>Smart Switch Tutor</title>
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <header class="topbar">
+
+        <button
+            class="menu-button"
+            onclick="history.back()"
+        >
+            ←
+        </button>
+
+        <div class="topbar-title">
+            🤖 Switchy Tutor
+        </div>
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+    <main class="content">
+
+
+        <section class="card">
+
+            <div class="switchy-header">
+
+                <div class="switchy-avatar">
+                    🤖
+                </div>
+
+                <div>
+
+                    <h2>
+                        Switchy
+                    </h2>
+
+                    <p>
+                        Your Smart Switch Assistant
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p>
+                I'm here to help you understand
+                and use Smart Switch.
+            </p>
+
+
+            <button
+                id="switchyVoiceButton"
+                class="primary-button"
+                type="button"
+            >
+                🎤 Talk to Switchy
+            </button>
+
+            <p
+                id="switchyMessage"
+                class="message"
+            >
+                Ask me to open a section or
+                explain how Smart Switch works.
+            </p>
+
+        </section>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="card">
+
+            <h2>
+                1. How Smart Switch Works
+            </h2>
+
+            <p>
+                Smart Switch lets you control
+                connected electrical devices
+                from the app.
+            </p>
+
+            <p>
+                Depending on the device,
+                communication can use Wi-Fi,
+                Bluetooth, an IP address,
+                ESP8266, ESP-01, ESP32,
+                HTTP or MQTT.
+            </p>
+
+        </section>
+
+
+        <!-- ADD DEVICE -->
+
+        <section class="card">
+
+            <h2>
+                2. Adding a Device
+            </h2>
+
+            <p>
+                Open <strong>Add Device</strong>
+                and enter the information for
+                your switch.
+            </p>
+
+            <br>
+
+            <p>
+                You may need:
+            </p>
+
+            <ul>
+
+                <li>Device name</li>
+                <li>Device type</li>
+                <li>Wi-Fi connection</li>
+                <li>Bluetooth connection</li>
+                <li>IP address</li>
+                <li>Port</li>
+                <li>HTTP or MQTT protocol</li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- WIFI -->
+
+        <section class="card">
+
+            <h2>
+                3. Wi-Fi Connection
+            </h2>
+
+            <p>
+                Wi-Fi allows Smart Switch devices
+                to communicate across a network.
+            </p>
+
+            <p>
+                Make sure the device and controller
+                are connected to the correct network
+                when using local IP control.
+            </p>
+
+        </section>
+
+
+        <!-- BLUETOOTH -->
+
+        <section class="card">
+
+            <h2>
+                4. Bluetooth
+            </h2>
+
+            <p>
+                Bluetooth can be used for supported
+                nearby devices.
+            </p>
+
+            <p>
+                Bluetooth availability depends on
+                the hardware and browser/device
+                support.
+            </p>
+
+        </section>
+
+
+        <!-- ESP -->
+
+        <section class="card">
+
+            <h2>
+                5. ESP8266, ESP-01 and ESP32
+            </h2>
+
+            <p>
+                These controllers can connect
+                physical switches to Smart Switch.
+            </p>
+
+            <p>
+                The controller receives commands
+                from the application and controls
+                the connected relay or electrical
+                circuit.
+            </p>
+
+        </section>
+
+
+        <!-- CONTROL -->
+
+        <section class="card">
+
+            <h2>
+                6. Controlling a Switch
+            </h2>
+
+            <p>
+                Once a device has been added,
+                its control card will appear in
+                My Devices.
+            </p>
+
+            <p>
+                Press the visible switch button
+                to change its state.
+            </p>
+
+        </section>
+
+
+        <!-- DIAGNOSIS -->
+
+        <section class="card">
+
+            <h2>
+                7. Diagnosing Problems
+            </h2>
+
+            <p>
+                If a device does not respond,
+                check these things:
+            </p>
+
+            <br>
+
+            <ol>
+
+                <li>
+                    Check that the device has power.
+                </li>
+
+                <li>
+                    Check the Wi-Fi connection.
+                </li>
+
+                <li>
+                    Check the IP address.
+                </li>
+
+                <li>
+                    Check the port.
+                </li>
+
+                <li>
+                    Check the selected protocol.
+                </li>
+
+                <li>
+                    Check whether the ESP controller
+                    is running.
+                </li>
+
+                <li>
+                    Try reconnecting the device.
+                </li>
+
+            </ol>
+
+        </section>
+
+
+        <!-- OFFLINE DEVICE -->
+
+        <section class="card">
+
+            <h2>
+                8. Device Offline
+            </h2>
+
+            <p>
+                If a device appears offline,
+                first check power and network
+                connectivity.
+            </p>
+
+            <p>
+                For IP-based devices, verify that
+                the configured IP address still
+                belongs to the device.
+            </p>
+
+        </section>
+
+
+        <!-- SAFETY -->
+
+        <section class="card">
+
+            <h2>
+                9. Electrical Safety
+            </h2>
+
+            <p>
+                Smart Switch controls can operate
+                electrical equipment. Always make
+                sure the hardware installation is
+                properly protected and isolated.
+            </p>
+
+            <p>
+                Do not work on live electrical
+                circuits.
+            </p>
+
+        </section>
+
+
+        <!-- VOICE COMMANDS -->
+
+        <section class="card">
+
+            <h2>
+                10. Voice Commands
+            </h2>
+
+            <p>
+                You can use Switchy to navigate
+                around the application.
+            </p>
+
+            <br>
+
+            <p>
+                Try saying:
+            </p>
+
+            <ul>
+
+                <li>“Open settings.”</li>
+
+                <li>“Open devices.”</li>
+
+                <li>“Open my profile.”</li>
+
+                <li>“Open tutorial.”</li>
+
+                <li>“Add a device.”</li>
+
+                <li>“Go home.”</li>
+
+                <li>“Help.”</li>
+
+            </ul>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/switchy.js"></script>
+
+
+<script>
+
+document
+    .getElementById("switchyVoiceButton")
+    ?.addEventListener(
+        "click",
+        () => {
+
+            window.Switchy?.startListening();
+
+        }
+    );
+
+</script>
+
+<script src="js/switchy.js"></script>
+<div class="switchy-box">
+
+    <div class="switchy-header">
+
+        <div class="switchy-avatar">
+            🤖
+        </div>
+
+        <div>
+            <strong>Switchy</strong>
+            <small>Smart Switch Assistant</small>
+        </div>
+
+    </div>
+
+    <p id="switchyMessage">
+        Hi, I'm Switchy. How can I help?
+    </p>
+
+    <button
+        id="switchyVoiceButton"
+        class="primary-button"
+        type="button"
+    >
+        🎤 Talk to Switchy
+    </button>
+
+</div>
+</body>
+
+</html>

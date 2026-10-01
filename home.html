@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/app.css"
+    >
+
+    <title>SMART SWITCH - Dashboard</title>
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        id="sidebar"
+        class="sidebar"
+    >
+
+        <div class="sidebar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+
+        <a
+            href="home.html"
+            class="active-link"
+        >
+            🏠 Dashboard
+        </a>
+
+
+        <a href="devices.html">
+            💡 My Devices
+        </a>
+
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+
+        <a href="ai-tutor.html">
+            🤖 AI Tutorial
+        </a>
+
+
+        <div
+            id="adminMenu"
+            class="hidden"
+        >
+
+            <a href="users.html">
+                👑 User Management
+            </a>
+
+        </div>
+
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+
+        <button
+            id="logoutButton"
+            class="danger"
+            type="button"
+        >
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="menu-button"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+        <div class="topbar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+
+    <!-- DASHBOARD -->
+
+    <main class="content">
+
+
+        <!-- WELCOME -->
+
+        <section class="card dashboard-welcome">
+
+            <p class="dashboard-label">
+                SMART SWITCH
+            </p>
+
+
+            <h1>
+                Welcome,
+                <span id="userName">
+                    User
+                </span>
+                👋
+            </h1>
+
+
+            <p id="userRole">
+                Loading your account...
+            </p>
+
+        </section>
+
+
+
+        <!-- QUICK ACCESS -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <h2>
+                    Quick Access
+                </h2>
+
+                <p>
+                    Everything you need to control your
+                    Smart Switch system.
+                </p>
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <!-- DEVICES -->
+
+                <div class="card dashboard-card">
+
+                    <div class="dashboard-icon">
+                        💡
+                    </div>
+
+                    <h3>
+                        My Devices
+                    </h3>
+
+                    <p>
+                        View your connected switches and
+                        turn them ON or OFF.
+                    </p>
+
+
+                    <a
+                        href="devices.html"
+                        class="primary-button"
+                    >
+                        Open Devices
+                    </a>
+
+                </div>
+
+
+
+                <!-- PROFILE -->
+
+                <div class="card dashboard-card">
+
+                    <div class="dashboard-icon">
+                        👤
+                    </div>
+
+                    <h3>
+                        My Profile
+                    </h3>
+
+                    <p>
+                        View your name, username, phone
+                        number and account information.
+                    </p>
+
+
+                    <a
+                        href="profile.html"
+                        class="primary-button"
+                    >
+                        Open Profile
+                    </a>
+
+                </div>
+
+
+
+                <!-- TUTORIAL -->
+
+                <div class="card dashboard-card">
+
+                    <div class="dashboard-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        AI Tutorial
+                    </h3>
+
+                    <p>
+                        Learn how to connect devices,
+                        control switches and solve problems.
+                    </p>
+
+
+                    <a
+                        href="ai-tutor.html"
+                        class="primary-button"
+                    >
+                        Open Tutorial
+                    </a>
+
+                </div>
+
+
+
+                <!-- SETTINGS -->
+
+                <div class="card dashboard-card">
+
+                    <div class="dashboard-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Settings
+                    </h3>
+
+                    <p>
+                        Manage application preferences and
+                        Smart Switch options.
+                    </p>
+
+
+                    <a
+                        href="settings.html"
+                        class="primary-button"
+                    >
+                        Open Settings
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SYSTEM STATUS -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>
+                    🌐 System Status
+                </h2>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Firebase
+                </span>
+
+                <span class="online-status">
+                    ● Connected
+                </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Smart Switch Account
+                </span>
+
+                <span
+                    id="accountStatus"
+                    class="online-status"
+                >
+                    ● Checking...
+                </span>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Device System
+                </span>
+
+                <span class="online-status">
+                    ● Ready
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ADMIN -->
+
+        <section
+            id="adminCard"
+            class="card hidden"
+        >
+
+            <div class="dashboard-icon">
+                👑
+            </div>
+
+
+            <h2>
+                Administration
+            </h2>
+
+
+            <p>
+                Manage Smart Switch users and
+                administrator permissions.
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="users.html"
+                class="primary-button"
+            >
+                User Management
+            </a>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/home.js"
+></script>
+
+<script src="js/switchy.js"></script>
+
+<div class="switchy-box">
+
+    <div class="switchy-header">
+
+        <div class="switchy-avatar">
+            🤖
+        </div>
+
+        <div>
+            <strong>Switchy</strong>
+            <small>Smart Switch Assistant</small>
+        </div>
+
+    </div>
+
+    <p id="switchyMessage">
+        Hi, I'm Switchy. How can I help?
+    </p>
+
+    <button
+        id="switchyVoiceButton"
+        class="primary-button"
+        type="button"
+    >
+        🎤 Talk to Switchy
+    </button>
+
+</div>
+</body>
+
+</html>

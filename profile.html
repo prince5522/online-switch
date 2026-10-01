@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <title>SMART SWITCH - My Profile</title>
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <aside id="sidebar" class="sidebar">
+
+        <div class="sidebar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+        <a href="home.html">🏠 Home</a>
+
+        <a href="devices.html">
+            💡 My Devices
+        </a>
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+        <div id="adminMenu" class="hidden">
+
+            <a href="users.html">
+                👑 User Management
+            </a>
+
+        </div>
+
+        <a href="ai-tutor.html">
+            🤖 Smart Switch Tutor
+        </a>
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+        <button
+            id="logoutButton"
+            class="danger"
+            type="button"
+        >
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="menu-button"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <div class="topbar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+    <main class="content">
+
+        <section class="card">
+
+            <h2>👤 My Profile</h2>
+
+            <p>
+                Your Smart Switch account information.
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input id="profileFullName" readonly>
+            </div>
+
+
+            <div class="input-group">
+                <label>Username</label>
+                <input id="profileUsername" readonly>
+            </div>
+
+
+            <div class="input-group">
+                <label>Phone</label>
+                <input id="profilePhone" readonly>
+            </div>
+
+
+            <div class="input-group">
+                <label>Email</label>
+                <input id="profileEmail" readonly>
+            </div>
+
+
+            <div class="input-group">
+                <label>Account Role</label>
+                <input id="profileRole" readonly>
+            </div>
+
+
+            <div class="input-group">
+                <label>Account Status</label>
+                <input id="profileStatus" readonly>
+            </div>
+
+
+            <div
+                id="profileMessage"
+                class="message hidden"
+            ></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/profile.js"
+></script>
+<script src="js/switchy.js"></script>
+
+<div class="switchy-box">
+
+    <div class="switchy-header">
+
+        <div class="switchy-avatar">
+            🤖
+        </div>
+
+        <div>
+            <strong>Switchy</strong>
+            <small>Smart Switch Assistant</small>
+        </div>
+
+    </div>
+
+    <p id="switchyMessage">
+        Hi, I'm Switchy. How can I help?
+    </p>
+
+    <button
+        id="switchyVoiceButton"
+        class="primary-button"
+        type="button"
+    >
+        🎤 Talk to Switchy
+    </button>
+
+</div>
+</body>
+</html>

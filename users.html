@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <title>SMART SWITCH - User Management</title>
+
+</head>
+
+<body>
+
+<div class="app-shell">
+
+
+    <aside id="sidebar" class="sidebar">
+
+        <div class="sidebar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+        <a href="home.html">🏠 Home</a>
+
+        <a href="devices.html">
+            💡 My Devices
+        </a>
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+        <a href="users.html">
+            👑 User Management
+        </a>
+
+        <a href="ai-tutor.html">
+            🤖 Smart Switch Tutor
+        </a>
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+        <button
+            id="logoutButton"
+            class="danger"
+            type="button"
+        >
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="menu-button"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <div class="topbar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+    <main class="content">
+
+        <section class="card">
+
+            <h2>👑 User Management</h2>
+
+            <p>
+                Manage Smart Switch accounts.
+            </p>
+
+        </section>
+
+
+        <section class="card">
+
+            <div
+                id="usersMessage"
+                class="message hidden"
+            ></div>
+
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="usersTable">
+
+                        <tr>
+                            <td colspan="5">
+                                Loading users...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/users.js"
+></script>
+
+<script src="js/switchy.js"></script>
+
+</body>
+</html>

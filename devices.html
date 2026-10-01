@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <title>SMART SWITCH - My Devices</title>
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        id="sidebar"
+        class="sidebar"
+    >
+
+        <div class="sidebar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+
+        <a href="home.html">
+            🏠 Home
+        </a>
+
+        <a href="devices.html">
+            💡 My Devices
+        </a>
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+        <div
+            id="adminMenu"
+            class="hidden"
+        >
+
+            <a href="users.html">
+                👑 User Management
+            </a>
+
+        </div>
+
+        <a href="ai-tutor.html">
+            🤖 Smart Switch Tutor
+        </a>
+
+        <a href="settings.html">
+            ⚙️ Settings
+        </a>
+
+        <button
+            id="logoutButton"
+            class="danger"
+            type="button"
+        >
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="menu-button"
+            type="button"
+        >
+            ☰
+        </button>
+
+        <div class="topbar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main class="content">
+
+
+        <!-- HEADER -->
+
+        <section class="card">
+
+            <h2>
+                💡 My Devices
+            </h2>
+
+            <p>
+                Add and control your connected
+                Smart Switch devices.
+            </p>
+
+        </section>
+
+
+        <!-- ADD DEVICE -->
+
+        <section class="card">
+
+            <h3>
+                ➕ Add Device
+            </h3>
+
+            <br>
+
+
+            <form id="deviceForm">
+
+
+                <div class="input-group">
+
+                    <label for="deviceName">
+                        Device Name
+                    </label>
+
+                    <input
+                        id="deviceName"
+                        type="text"
+                        placeholder="e.g. Living Room Light"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="deviceType">
+                        Device Type
+                    </label>
+
+                    <select
+                        id="deviceType"
+                        required
+                    >
+
+                        <option value="">
+                            Select device type
+                        </option>
+
+                        <option value="esp8266">
+                            ESP8266
+                        </option>
+
+                        <option value="esp32">
+                            ESP32
+                        </option>
+
+                        <option value="esp01">
+                            ESP-01
+                        </option>
+
+                        <option value="arduino">
+                            Arduino
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="deviceHost">
+                        IP Address / Host
+                    </label>
+
+                    <input
+                        id="deviceHost"
+                        type="text"
+                        placeholder="e.g. 192.168.1.50"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="devicePort">
+                        Port
+                    </label>
+
+                    <input
+                        id="devicePort"
+                        type="number"
+                        value="80"
+                        min="1"
+                        max="65535"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="deviceProtocol">
+                        Protocol
+                    </label>
+
+                    <select
+                        id="deviceProtocol"
+                        required
+                    >
+
+                        <option value="http">
+                            HTTP
+                        </option>
+
+                        <option value="https">
+                            HTTPS
+                        </option>
+
+                        <option value="mqtt">
+                            MQTT
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    id="addDeviceButton"
+                    class="primary-button"
+                    type="submit"
+                >
+                    Add Device
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+        <!-- DEVICES -->
+
+        <section class="card">
+
+            <h3>
+                📋 Your Devices
+            </h3>
+
+            <br>
+
+
+            <div
+                id="devicesList"
+                class="grid"
+            >
+
+                <p id="devicesLoading">
+                    Loading devices...
+                </p>
+
+            </div>
+
+        </section>
+
+
+<section class="card">
+
+    <h2>
+        ➕ Add Device
+    </h2>
+
+    <p>
+        Connect a Smart Switch device using
+        its controller and communication method.
+    </p>
+
+
+    <!-- DEVICE NAME -->
+
+    <div class="input-group">
+
+        <label for="deviceName">
+            Device Name
+        </label>
+
+        <input
+            id="deviceName"
+            type="text"
+            placeholder="e.g. Bedroom Light"
+            required
+        >
+
+    </div>
+
+
+    <!-- HARDWARE -->
+
+    <div class="input-group">
+
+        <label for="deviceType">
+            Hardware / Controller
+        </label>
+
+        <select
+            id="deviceType"
+            required
+        >
+
+            <option value="">
+                Select controller
+            </option>
+
+            <option value="esp8266">
+                ESP8266
+            </option>
+
+            <option value="esp01">
+                ESP-01
+            </option>
+
+            <option value="esp32">
+                ESP32
+            </option>
+
+            <option value="arduino-uno">
+                Arduino Uno
+            </option>
+
+            <option value="arduino-nano">
+                Arduino Nano
+            </option>
+
+            <option value="other">
+                Other
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- CONNECTION -->
+
+    <div class="input-group">
+
+        <label for="connectionType">
+            Connection Method
+        </label>
+
+        <select
+            id="connectionType"
+            required
+        >
+
+            <option value="">
+                Select connection
+            </option>
+
+            <option value="wifi">
+                Wi-Fi
+            </option>
+
+            <option value="bluetooth">
+                Bluetooth
+            </option>
+
+            <option value="ip">
+                IP Address
+            </option>
+
+            <option value="http">
+                HTTP
+            </option>
+
+            <option value="mqtt">
+                MQTT
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- IP -->
+
+    <div
+        id="ipSettings"
+        class="card hidden"
+    >
+
+        <h3>
+            🌐 Network Settings
+        </h3>
+
+        <div class="input-group">
+
+            <label for="deviceHost">
+                IP Address / Host
+            </label>
+
+            <input
+                id="deviceHost"
+                type="text"
+                placeholder="192.168.1.100"
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="devicePort">
+                Port
+            </label>
+
+            <input
+                id="devicePort"
+                type="number"
+                placeholder="80"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- PROTOCOL -->
+
+    <div
+        id="protocolSettings"
+        class="card hidden"
+    >
+
+        <h3>
+            🔌 Protocol
+        </h3>
+
+        <div class="input-group">
+
+            <label for="deviceProtocol">
+                Protocol
+            </label>
+
+            <select id="deviceProtocol">
+
+                <option value="http">
+                    HTTP
+                </option>
+
+                <option value="mqtt">
+                    MQTT
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <button
+        id="saveDeviceButton"
+        class="primary-button"
+        type="button"
+    >
+
+        Add Device
+
+    </button>
+
+</section>
+
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/devices.js"
+></script>
+
+<script src="js/switchy.js"></script>
+
+<div class="switchy-box">
+
+    <div class="switchy-header">
+
+        <div class="switchy-avatar">
+            🤖
+        </div>
+
+        <div>
+            <strong>Switchy</strong>
+            <small>Smart Switch Assistant</small>
+        </div>
+
+    </div>
+
+    <p id="switchyMessage">
+        Hi, I'm Switchy. How can I help?
+    </p>
+
+    <button
+        id="switchyVoiceButton"
+        class="primary-button"
+        type="button"
+    >
+        🎤 Talk to Switchy
+    </button>
+
+</div>
+</body>
+
+</html>

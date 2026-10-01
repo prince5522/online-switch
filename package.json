@@ -1,0 +1,16 @@
+{
+  "name": "smart-switch-v1.8",
+  "version": "1.8.0",
+  "description": "SMART SWITCH - Smart control. Simple living.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0"
+  }
+
+}

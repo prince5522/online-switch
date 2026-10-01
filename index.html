@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <title>SMART SWITCH</title>
+
+</head>
+
+
+<body>
+
+<main class="auth-page">
+
+    <section class="auth-card">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ⚡
+            </div>
+
+            <h1>
+                SMART SWITCH
+            </h1>
+
+            <p>
+                Smart control. Simple living.
+            </p>
+
+            <small>
+                Secure smart-device management
+            </small>
+
+        </div>
+
+
+        <!-- LOGIN -->
+
+        <div id="loginSection">
+
+            <div class="section-heading">
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Log in to control your Smart Switch devices.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+
+                <div class="input-group">
+
+                    <label for="loginEmail">
+                        Email
+                    </label>
+
+                    <input
+                        id="loginEmail"
+                        type="email"
+                        autocomplete="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            id="loginPassword"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="loginPassword"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    type="submit"
+                >
+                    Log In
+                </button>
+
+
+                <button
+                    id="forgotPassword"
+                    class="text-button"
+                    type="button"
+                >
+                    Forgot password?
+                </button>
+
+            </form>
+
+
+            <div class="auth-switch">
+
+                Don't have an account?
+
+                <button
+                    id="showSignup"
+                    class="link-button"
+                    type="button"
+                >
+                    Create Account
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+
+        <div
+            id="signupSection"
+            class="hidden"
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p>
+                    Create your Smart Switch account.
+                </p>
+
+            </div>
+
+
+            <form id="signupForm">
+
+
+                <div class="input-group">
+
+                    <label for="signupName">
+                        Full Name
+                    </label>
+
+                    <input
+                        id="signupName"
+                        type="text"
+                        placeholder="Enter your full name"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="signupUsername">
+                        Username
+                    </label>
+
+                    <input
+                        id="signupUsername"
+                        type="text"
+                        placeholder="Choose a username"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="signupPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        id="signupPhone"
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        autocomplete="tel"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="signupEmail">
+                        Email
+                    </label>
+
+                    <input
+                        id="signupEmail"
+                        type="email"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            id="signupPassword"
+                            type="password"
+                            minlength="6"
+                            placeholder="At least 6 characters"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="signupPassword"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="signupConfirm">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            id="signupConfirm"
+                            type="password"
+                            minlength="6"
+                            placeholder="Repeat your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="signupConfirm"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    type="submit"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+            <div class="auth-switch">
+
+                Already have an account?
+
+                <button
+                    id="showLogin"
+                    class="link-button"
+                    type="button"
+                >
+                    Log In
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="authMessage"
+            class="message hidden"
+        ></div>
+
+
+        <footer>
+
+            © 2026 Created by Newton.<br>
+            All rights reserved.
+
+        </footer>
+
+
+    </section>
+
+</main>
+
+
+<script type="module">
+
+import "./js/auth.js";
+
+
+// =====================================================
+// LOGIN / SIGNUP SWITCH
+// =====================================================
+
+const loginSection =
+    document.getElementById("loginSection");
+
+const signupSection =
+    document.getElementById("signupSection");
+
+
+document
+    .getElementById("showSignup")
+    ?.addEventListener(
+        "click",
+        () => {
+
+            loginSection.classList.add(
+                "hidden"
+            );
+
+            signupSection.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+
+document
+    .getElementById("showLogin")
+    ?.addEventListener(
+        "click",
+        () => {
+
+            signupSection.classList.add(
+                "hidden"
+            );
+
+            loginSection.classList.remove(
+                "hidden"
+            );
+
+        }
+    );
+
+</script>
+
+<script src="js/switchy.js"></script>
+<div class="switchy-box">
+
+    <div class="switchy-header">
+
+        <div class="switchy-avatar">
+            🤖
+        </div>
+
+        <div>
+            <strong>Switchy</strong>
+            <small>Smart Switch Assistant</small>
+        </div>
+
+    </div>
+
+    <p id="switchyMessage">
+        Hi, I'm Switchy. How can I help?
+    </p>
+
+    <button
+        id="switchyVoiceButton"
+        class="primary-button"
+        type="button"
+    >
+        🎤 Talk to Switchy
+    </button>
+
+</div>
+
+<!-- =====================================================
+     SMART SWITCH INSTALL POPUP
+     ===================================================== -->
+
+<div
+    id="installPopup"
+    class="install-popup hidden"
+>
+
+    <div class="install-popup-icon">
+        📲
+    </div>
+
+    <h3>
+        Install Smart Switch
+    </h3>
+
+    <p>
+        Install Smart Switch on your device
+        for faster access to your smart devices.
+    </p>
+
+    <div class="install-popup-actions">
+
+        <button
+            id="installAppButton"
+            class="primary-button"
+            type="button"
+        >
+            Install App
+        </button>
+
+        <button
+            id="installLaterButton"
+            class="text-button"
+            type="button"
+        >
+            Not now
+        </button>
+
+    </div>
+
+</div>
+
+<script
+    type="module"
+    src="js/auth.js"
+></script>
+
+<script
+    src="js/switchy.js"
+></script>
+
+<script
+    src="js/install.js"
+></script>
+
+</body>
+</html>

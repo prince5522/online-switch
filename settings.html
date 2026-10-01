@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#07111f"
+    >
+
+    <link
+        rel="manifest"
+        href="manifest.json"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/app.css"
+    >
+
+    <title>SMART SWITCH - Settings</title>
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        id="sidebar"
+        class="sidebar"
+    >
+
+        <div class="sidebar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+
+        <a href="home.html">
+            🏠 Dashboard
+        </a>
+
+
+        <a href="devices.html">
+            💡 My Devices
+        </a>
+
+
+        <a href="profile.html">
+            👤 My Profile
+        </a>
+
+
+        <a href="ai-tutor.html">
+            🤖 AI Tutorial
+        </a>
+
+
+        <div
+            id="adminMenu"
+            class="hidden"
+        >
+
+            <a href="users.html">
+                👑 User Management
+            </a>
+
+        </div>
+
+
+        <a
+            href="settings.html"
+            class="active-link"
+        >
+            ⚙️ Settings
+        </a>
+
+
+        <button
+            id="logoutButton"
+            class="danger"
+            type="button"
+        >
+            🚪 Log Out
+        </button>
+
+    </aside>
+
+
+
+    <!-- TOPBAR -->
+
+    <header class="topbar">
+
+        <button
+            id="menuButton"
+            class="menu-button"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+        <div class="topbar-title">
+            ⚡ SMART SWITCH
+        </div>
+
+
+        <div class="online-status">
+            ● Online
+        </div>
+
+    </header>
+
+
+
+    <!-- SETTINGS -->
+
+    <main class="content">
+
+
+        <section class="card">
+
+            <h1>
+                ⚙️ Settings
+            </h1>
+
+            <p>
+                Change how SMART SWITCH behaves on your
+                device.
+            </p>
+
+        </section>
+
+
+
+        <!-- GENERAL -->
+
+        <section class="card settings-section">
+
+            <h2>
+                General
+            </h2>
+
+
+            <div class="setting-item">
+
+                <div>
+
+                    <strong>
+                        Notifications
+                    </strong>
+
+                    <p>
+                        Show messages when a device changes
+                        state.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        id="notificationSetting"
+                        type="checkbox"
+                        checked
+                    >
+
+                    <span class="toggle-slider"></span>
+
+                </label>
+
+            </div>
+
+
+            <div class="setting-item">
+
+                <div>
+
+                    <strong>
+                        Confirm device actions
+                    </strong>
+
+                    <p>
+                        Ask before performing important
+                        device actions.
+                    </p>
+
+                </div>
+
+
+                <label class="toggle">
+
+                    <input
+                        id="confirmSetting"
+                        type="checkbox"
+                    >
+
+                    <span class="toggle-slider"></span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONNECTION -->
+
+        <section class="card settings-section">
+
+            <h2>
+                🌐 Connection
+            </h2>
+
+
+            <div class="setting-item">
+
+                <div>
+
+                    <strong>
+                        Connection methods
+                    </strong>
+
+                    <p>
+                        Manage devices using the connection
+                        methods supported by SMART SWITCH.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="connection-list">
+
+                <span>📶 Wi-Fi</span>
+
+                <span>🔵 Bluetooth</span>
+
+                <span>🌐 IP Address</span>
+
+                <span>🔗 HTTP</span>
+
+                <span>📡 MQTT</span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SECURITY -->
+
+        <section class="card settings-section">
+
+            <h2>
+                🔐 Security
+            </h2>
+
+
+            <a
+                href="profile.html"
+                class="secondary-button"
+            >
+                👤 Account & Profile
+            </a>
+
+
+            <p class="input-help">
+                Your account authentication is handled
+                securely through Firebase Authentication.
+            </p>
+
+        </section>
+
+
+
+        <!-- TUTORIAL -->
+
+        <section class="card settings-section">
+
+            <h2>
+                🤖 Tutorial
+            </h2>
+
+
+            <p>
+                Need help using SMART SWITCH?
+            </p>
+
+
+            <br>
+
+
+            <a
+                href="ai-tutor.html"
+                class="primary-button"
+            >
+                Open AI Tutorial
+            </a>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section class="card settings-section">
+
+            <h2>
+                ℹ️ About SMART SWITCH
+            </h2>
+
+
+            <p>
+                SMART SWITCH
+            </p>
+
+
+            <p>
+                Version 1.8
+            </p>
+
+
+            <p>
+                Smart control. Simple living.
+            </p>
+
+
+            <p class="input-help">
+                A smart-control application for connected
+                switches and devices.
+            </p>
+
+
+            <footer>
+                © 2026 Created by Newton.
+                All rights reserved.
+            </footer>
+
+        </section>
+
+
+
+        <div
+            id="settingsMessage"
+            class="message hidden"
+        ></div>
+
+
+    </main>
+
+</div>
+
+
+<script
+    type="module"
+    src="js/settings.js"
+></script>
+
+</body>
+
+<script src="js/switchy.js"></script>
+
+</html>
